@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Cloud Clipboard MVP
 
 A secure, cloud-based platform that allows users to save, share, and manage clipboard items called Clip Cards.
@@ -155,3 +156,6 @@ Continue using your MongoDB Atlas cluster. Make sure to update the IP whitelist 
 - JWT tokens are set to expire in 30 days
 - Passwords are hashed using bcrypt
 - CORS is enabled for development but should be restricted in production
+=======
+# oncloudclipboard
+>>>>>>> 3a1a09409866c1b6206690e17a5b6bf5970963e0
