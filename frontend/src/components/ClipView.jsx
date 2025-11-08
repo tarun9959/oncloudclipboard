@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const API_URL = process.env.REACT_APP_API_URL || '';
-
 const ClipView = ({ token, clipCode, onBack }) => {
   const [clip, setClip] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -17,7 +15,7 @@ const ClipView = ({ token, clipCode, onBack }) => {
           }
         } : {};
         
-        const response = await axios.get(`${API_URL}/api/clip/${clipCode}`, config);
+        const response = await axios.get(`/api/clip/${clipCode}`, config);
         setClip(response.data);
       } catch (err) {
         setError(err.response?.data?.message || 'An error occurred');

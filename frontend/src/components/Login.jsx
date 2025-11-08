@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const API_URL = process.env.REACT_APP_API_URL || '';
-
 const Login = ({ setToken, switchToSignup }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -13,7 +11,7 @@ const Login = ({ setToken, switchToSignup }) => {
     setError('');
     
     try {
-      const response = await axios.post(`${API_URL}/api/auth/signin`, {
+      const response = await axios.post('/api/auth/signin', {
         email,
         password
       });

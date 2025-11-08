@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const API_URL = process.env.REACT_APP_API_URL || '';
-
 const ClipForm = ({ token, onClipCreated }) => {
   const [type, setType] = useState('Text');
   const [content, setContent] = useState('');
@@ -23,7 +21,7 @@ const ClipForm = ({ token, onClipCreated }) => {
         }
       };
       
-      const response = await axios.post(`${API_URL}/api/clip/add`, {
+      const response = await axios.post('/api/clip/add', {
         type,
         content,
         expiryMinutes
